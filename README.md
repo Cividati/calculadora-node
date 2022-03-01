@@ -18,4 +18,4 @@ calculadora feita em node capaz de realizar as operações de adição, subtraç
 
 ## Autor:
 
-- [Rubens Cividat](github.com/cividati)
+- [Rubens Cividati](github.com/cividati)
