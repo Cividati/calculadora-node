@@ -1,3 +1,5 @@
+const validate  = require("validate.js");
+const NumerosConstaint = require('./validate');
 
 const Calculadora = {
     sum(num1, num2){
@@ -24,7 +26,18 @@ const Calculadora = {
         const num1 = parseFloat(req.query.num1);
         const num2 = parseFloat(req.query.num2);
         const op = req.path; // -> /sum, /sub, mul...
+
+        // constraint aqui
+        const num1Validate = validate({num1}, NumerosConstaint.Constraint);
+        const num2Validate = validate({num2}, NumerosConstaint.Constraint);
+        const opValidate = validate({op}, NumerosConstaint.Constraint);
         
+        if (num1Validate !== undefined ||
+            num2Validate !== undefined ||
+            opValidate !== undefined){
+            return [num1Validate, num2Validate, opValidate]
+        }
+
         if (op == '/sum'){
             res = this.sum(num1, num2)
             return `${num1} + ${num2} = ${res}`

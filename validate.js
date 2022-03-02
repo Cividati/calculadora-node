@@ -1,4 +1,4 @@
-const requestConstraint = {
+const Constraint = {
     num1: {
         type: "number"
     },
@@ -10,4 +10,4 @@ const requestConstraint = {
     }
 }
 
-module.exports = { requestConstraint };
+module.exports = { Constraint };
