@@ -4,12 +4,12 @@ calculadora feita em node capaz de realizar as operações de adição, subtraç
 ## Rotas
 
 - /: Contém o README.md;
-- /sum: Realiza operações de soma;
-- /sub: Realiza operações de subtração;
-- /mul: Realiza operações de multiplicação;
-- /div: Realiza operações de divisão;
-- /pot: Realiza operações de potênciação;
-- /rad: Reliza operações de radiciação.  
+- [/sum](/sum): Realiza operações de soma;
+- [/sub](/sub): Realiza operações de subtração;
+- [/mul](/mul): Realiza operações de multiplicação;
+- [/div](/div): Realiza operações de divisão;
+- [/pot](/pot): Realiza operações de potênciação;
+- [/rad](/rad): Reliza operações de radiciação.  
 
 ## Parâmetros:
 
