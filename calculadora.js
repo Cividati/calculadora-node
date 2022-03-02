@@ -23,19 +23,21 @@ const Calculadora = {
 
     calculate(req, res){
 
+        // read numbers from args
         const num1 = parseFloat(req.query.num1);
         const num2 = parseFloat(req.query.num2);
-        const op = req.path; // -> /sum, /sub, mul...
+        const op = req.path; // -> /sum, /sub, /mul...
 
-        // constraint aqui
+        // logging
+        console.log('path:', op, '- num1:',num1,'- num2:', num2)
+
+        // constraints
         const num1Validate = validate({num1}, NumerosConstaint.Constraint);
         const num2Validate = validate({num2}, NumerosConstaint.Constraint);
-        const opValidate = validate({op}, NumerosConstaint.Constraint);
         
         if (num1Validate !== undefined ||
-            num2Validate !== undefined ||
-            opValidate !== undefined){
-            return [num1Validate, num2Validate, opValidate]
+            num2Validate !== undefined){
+            return [num1Validate, num2Validate]
         }
 
         if (op == '/sum'){
