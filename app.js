@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80
 const Calculadora = require('./calculadora')
 
 app.get('/', (req, res) => {
@@ -10,7 +10,6 @@ app.get('/', (req, res) => {
   var data;
   try {
     data = fs.readFileSync('./README.md', 'utf8')
-    console.log(data)
   } catch (err) {
     console.error(err)
   }
