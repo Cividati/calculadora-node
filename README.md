@@ -3,7 +3,7 @@ calculadora feita em node capaz de realizar as operações de adição, subtraç
 
 ## Rotas
 
-- /: Contem o reade
+- /: Contém o README.md;
 - /sum: Realiza operações de soma;
 - /sub: Realiza operações de subtração;
 - /mul: Realiza operações de multiplicação;
