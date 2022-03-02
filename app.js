@@ -15,6 +15,11 @@ app.get('/', (req, res) => {
     console.error(err)
   }
 
+  // convert markdown to html
+  var showdown  = require('showdown'),
+    converter = new showdown.Converter(),
+    html      = converter.makeHtml(data);
+
   res.send(html)
 })
 
